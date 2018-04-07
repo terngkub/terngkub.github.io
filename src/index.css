@@ -1,0 +1,17 @@
+#header {
+	background-image: url('./img/header-background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 400px;
+}
+
+#header .dark-overlay {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	min-height: 400px;
+}
+
+#header .card-menu {
+	opacity: 0.8;
+}

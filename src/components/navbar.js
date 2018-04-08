@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 export default class SiteNavbar extends Component {
@@ -25,19 +26,19 @@ export default class SiteNavbar extends Component {
 				<Collapse isOpen={this.state.isOpen} navbar>
 					<Nav className="ml-auto" navbar>
 						<NavItem>
-							<NavLink href="/">Home</NavLink>
+							<Link to="/" className="nav-link">Home</Link>
 						</NavItem>
 						<NavItem>
-							<NavLink href="/works">All Projects</NavLink>
+							<Link to="/works" className="nav-link">All Projects</Link>
 						</NavItem>
 						<NavItem>
-							<NavLink href="/works/react">React</NavLink>
+							<Link to="/works/react" className="nav-link">React</Link>
 						</NavItem>
 						<NavItem>
-							<NavLink href="/works/bootstrap">Bootstrap</NavLink>
+							<Link to="/works/bootstrap" className="nav-link">Bootstrap</Link>
 						</NavItem>
 						<NavItem>
-							<NavLink href="/works/html5game">HTML5 Game</NavLink>
+							<Link to="/works/html5game" className="nav-link">HTML5 Game</Link>
 						</NavItem>
 					</Nav>
 				</Collapse>

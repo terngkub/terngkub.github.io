@@ -73,7 +73,7 @@ export default function Data() {
 			featured: false
 		},
 		{
-			title: 'farm_animal_toddlers',
+			title: 'farm_animals_toddlers',
 			description: '',
 			category: 'html5game',
 			featured: false

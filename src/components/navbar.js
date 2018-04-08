@@ -1,30 +1,47 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
-export default class Navbar extends Component {
+export default class SiteNavbar extends Component {
+	constructor(props) {
+		super(props);
+
+		this.toggle = this.toggle.bind(this);
+		this.state = {
+			isOpen: false
+		};
+	}
+
+	toggle() {
+		this.setState({
+			isOpen: !this.state.isOpen
+		});
+	}
+
 	render() {
 		return (
-			<nav className="navbar navbar-expand-md bg-dark navbar-dark">
-				<div className="container">
-					<a href="index.html" className="navbar-brand">terngkub.github.io</a>
-					<button className="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
-						<span className="navbar-toggler-icon"></span>
-					</button>
-					<div className="collapse navbar-collapse" id="navbarNav">
-						<ul className="navbar-nav ml-auto">
-							<li className="nav-item">
-								<Link to="/" className="nav-link">Home</Link>
-							</li>
-							<li className="nav-item">
-								<Link to="/works/abc" className="nav-link">Works</Link>
-							</li>
-							<li className="nav-item">
-								<Link to="/contact" className="nav-link">Contact</Link>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
+			<Navbar color="dark" dark expand="md">
+				<NavbarBrand href="/">terngkub.github.io</NavbarBrand>
+				<NavbarToggler onClick={this.toggle} />
+				<Collapse isOpen={this.state.isOpen} navbar>
+					<Nav className="ml-auto" navbar>
+						<NavItem>
+							<NavLink href="/">Home</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="/works">All Projects</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="/works/react">React</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="/works/bootstrap">Bootstrap</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="/works/html5game">HTML5 Game</NavLink>
+						</NavItem>
+					</Nav>
+				</Collapse>
+			</Navbar>
 		);
 	}
 }

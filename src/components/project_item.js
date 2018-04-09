@@ -14,7 +14,7 @@ export default class ProjectItem extends Component {
 					<div className="card-body">
 						<h4 className="card-title">{title}</h4>
 						<p className="card-text">{description}</p>
-						<a href={pageUrl} target="_blank" className="btn btn-info mr-3">page</a>
+						<a href={pageUrl} target="_blank" className="btn btn-info mr-3">view</a>
 						<a href={sourceUrl} target="_blank" className="btn btn-secondary mr-3">source</a>
 					</div>
 				</div>

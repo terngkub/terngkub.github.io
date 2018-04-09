@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 
 export default class SiteNavbar extends Component {
 	constructor(props) {
@@ -21,7 +21,7 @@ export default class SiteNavbar extends Component {
 	render() {
 		return (
 			<Navbar color="dark" dark expand="md">
-				<NavbarBrand href="/">terngkub.github.io</NavbarBrand>
+				<Link to="/" className="navbar-brand">terngkub.github.io</Link>
 				<NavbarToggler onClick={this.toggle} />
 				<Collapse isOpen={this.state.isOpen} navbar>
 					<Nav className="ml-auto" navbar>
